@@ -1,5 +1,5 @@
 # sqlalchemy-challenge
-# SQL-Challenge
+
 <br>
 For this project, I used SQLAlchemy ORM queries, Pandas, and Matplotlib for climate analysis in Hawaii!
 <br>
@@ -38,7 +38,9 @@ Find the full dode here: <br>
 [Precipitation Queries full code](https://github.com/yperez0914/sqlalchemy-challenge/blob/main/HI_Climate.ipynb)
 <br>
 
+
 <br>
+
 # Climate App
 <br>
 
