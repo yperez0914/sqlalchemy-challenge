@@ -31,12 +31,10 @@ Then, I loaded the Pandas DataFrame and plotted the results.
 
 Plot of Precipitation:
 [Hawaii Precipitation Results](https://github.com/yperez0914/sqlalchemy-challenge/blob/main/precipitation.png)
-<br>
-
 Histogram of Most Active Station's Temperature Observations:
 [Most Active Station's Temperature Observations](https://github.com/yperez0914/sqlalchemy-challenge/blob/main/Active_Station_Temp.png)
 <br>
-
+Find the full dode here: <br>
 [Precipitation Queries full code](https://github.com/yperez0914/sqlalchemy-challenge/blob/main/HI_Climate.ipynb)
 <br>
 
@@ -44,7 +42,6 @@ Histogram of Most Active Station's Temperature Observations:
 # Climate Analysis and Exploration
 <br>
 
-<br>
 I also performed several queries on the most active station. Ultimately, designing a Flask API using queries.
 <br>
 
@@ -64,6 +61,7 @@ def start_date(start):
     session.close()
     return jsonify(station_temps)
 ````
+
 <br>
 [Flask API full code](https://github.com/yperez0914/sqlalchemy-challenge/blob/main/app.py)
 <br>
