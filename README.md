@@ -39,7 +39,7 @@ Find the full dode here: <br>
 <br>
 
 <br>
-# Climate Analysis and Exploration
+# Climate App
 <br>
 
 I also performed several queries on the most active station. Ultimately, designing a Flask API using queries.
@@ -63,5 +63,6 @@ def start_date(start):
 ````
 
 <br>
+
 [Flask API full code](https://github.com/yperez0914/sqlalchemy-challenge/blob/main/app.py)
 <br>
