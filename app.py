@@ -6,6 +6,7 @@ import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func, inspect
+import dateutil.parser
 
 ##Database Setup##
 engine = create_engine("sqlite:///hawaii.sqlite")
@@ -105,20 +106,15 @@ def tobs():
 def start_date(start):
     session = Session(engine)
     # When given the start only, calculate TMIN, TAVG, and TMAX for all dates greater than and equal to the start date.
+    start_formatted = dateutil.parser.parse(start).strftime("%Y-%m-%d")
     station_temps = session.query(Measurement.station,Measurement.date,
         func.min(Measurement.tobs), func.max(Measurement.tobs), func.avg(Measurement.tobs)).\
-        filter(Measurement.date >= start).\
+        filter(Measurement.date >= start_formatted).\
         group_by(Measurement.date).all()
     session.close()
-   #Return a JSON list of the minimum temperature, the average temperature, and the max temperature for a given start date
-    # for start in ('%Y-%m-%d', '%d.%m.%Y', '%d/%m/%Y'):
-    #     try:
-    #         return jsonify(station_temps)
     return jsonify(station_temps)
-     # else:
-    #     return jsonify({"error": f"Start date {start} not found."}), 404
     
-    # When given the start and the end date, calculate the TMIN, TAVG, and TMAX for dates between the start and end date inclusive.
+# When given the start and the end date, calculate the TMIN, TAVG, and TMAX for dates between the start and end date inclusive.
 # Create route /api/v1.0/<start>/<end>
 @app.route("/api/v1.0/<start>/<end>")
 #Create a link from Python to database
@@ -132,8 +128,6 @@ def date_range(start, end):
     session.close()
    #Return a JSON list of the minimum temperature, the average temperature, and the max temperature for a given start 
     return jsonify(station_date_range)
-
- 
 
 if __name__== "__main__":
     app.run(debug=True)
