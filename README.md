@@ -71,5 +71,8 @@ def start_date(start):
 
 <br>
 To access the home page for the HI Climate API that lists all possible API routes, please run the full code and visit the following url:
+<br>
+
 [HI Climate API](http://127.0.0.1:5000/)
+
 <br>
