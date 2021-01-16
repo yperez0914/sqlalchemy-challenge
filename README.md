@@ -43,6 +43,7 @@ Find the full dode here: <br>
 
 # Climate App
 <br>
+<br>
 
 I also performed several queries on the most active station. Ultimately, designing a Flask API using queries.
 <br>
@@ -67,4 +68,8 @@ def start_date(start):
 <br>
 
 [Flask API full code](https://github.com/yperez0914/sqlalchemy-challenge/blob/main/app.py)
+
+<br>
+To access the home page for the HI Climate API that lists all possible API routes, please run the full code and visit the following url:
+[HI Climate API](http://127.0.0.1:5000/)
 <br>
